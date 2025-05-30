@@ -153,7 +153,7 @@
         message = descriptions[matches[0]];
       } else {
         const suggested = prevalence.find(p => matches.includes(p));
-        message = `You're a blend of <strong>${matches.map(m => descriptions[m].match(/<strong>(.*?)<\/strong>/)[1]).join('</strong> and <strong>')}</strong>.<br>But if we had to choose, you're most likely a <strong>${descriptions[suggested].match(/<strong>(.*?)<\/strong>/)[1]}</strong> based on typical patterns.`;
+        message = `You're a blend of <strong>${matches.map(m => descriptions[m].match(/<strong>(.*?)<\/strong>/)[1]).join('</strong> and <strong>')}</strong>.<br>But if we had to choose, you're most likely a <strong>${descriptions[suggested].match(/<strong>(.*?)<\/strong>/)[1]}</strong> based on typical patterns. <a href="https://drive.google.com/drive/folders/1lh8o2RwBV5F293c_2VDAZy3Pa1AmrT9f?usp=drive_link" target="_blank"><strong>Download the Chronotype Planner</strong></a> to balance your energy, focus, and rest—your way.',`;
       }
 
       resultText.innerHTML = message;
